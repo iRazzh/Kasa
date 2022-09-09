@@ -1,0 +1,8 @@
+section.cards{
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: #F7F7F7;
+    padding: 20px;
+    border-radius: 25px;
+}
