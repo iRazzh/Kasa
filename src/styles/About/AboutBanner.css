@@ -1,0 +1,14 @@
+.about-banner{
+    position: relative;
+}
+.about-banner div{
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.about-banner div img{
+    filter: brightness(0.7);
+    height: 100%;
+    object-fit: cover;
+    object-position: -480px 0;
+}

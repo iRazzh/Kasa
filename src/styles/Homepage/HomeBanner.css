@@ -1,21 +1,21 @@
 main img{
     width: 100%
 }
-section{
+.banner{
     position: relative;
 }
-section div{
+.banner div{
     height: 150px;
     overflow: hidden;
     border-radius: 15px;
 }
-section div img{
+.banner div img{
     width: 1200px;
     object-fit: cover;
     object-position: -355px -780px;
     filter: brightness(0.7);
 }
-section p{
+.banner p{
     margin: 0;
     width: 65%;
     position: absolute;

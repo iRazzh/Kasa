@@ -1,0 +1,11 @@
+.card-about{
+    background-color: rgba(246, 246, 246, 1);
+    margin: 1rem 0;
+    border-radius: 15px;
+}
+.card-about h1, .card-about p{
+    margin: 0;
+}
+.card-about h1{
+    padding: 15px;
+}
