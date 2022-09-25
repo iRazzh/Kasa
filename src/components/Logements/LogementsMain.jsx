@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from 'react'
 import '../../styles/Locations/LocationMain.css'
 
+import Tags from './scripts/Tags'
+import Toggle from './scripts/Toggle'
+
 export default function LogementsMain() {
     const [logements, setLogements] = useState({tags:[], equipments:[], pictures:[], rating:'', host:{'name':'', 'picture':''}});
 
@@ -20,7 +23,6 @@ export default function LogementsMain() {
             return response.json()
         })
         .then((datas) => {
-            console.log(datas)
             for (let i = 0; i < datas.length; i++){
                 if (datas[i].id === id){
                     setLogements(datas[i])
@@ -36,31 +38,21 @@ export default function LogementsMain() {
             </section>
 
             <section className="details">
-                <h1>{logements.title}</h1>
-                <p>{logements.location}</p>
+                <h1 className="details-title">{logements.title}</h1>
+                <p className="details-location">{logements.location}</p>
 
-                <ul>
-                    {logements.tags.map((tag) => <li key={tag}>{tag}</li>)}
-                </ul>
+                <ul className="details-tags">{logements.tags.map((tag) => <Tags key={tag} tag={tag} />)}</ul>
 
-                <div>
+                <div className="details-profile">
                     <p>{logements.rating}</p>
-                    <img src={logements.host.picture} alt="" />
-                    <p>{logements.host.name}</p>
+                    <div className="details-profile-host">
+                        <p className="details-host-name">{logements.host.name}</p>
+                        <img className="details-host-picture" src={logements.host.picture} alt="" />
+                    </div>
                 </div>
 
-                <div>
-                    <article>
-                        <h2>Description</h2>
-                        <p>{logements.description}</p>
-                    </article>
-                    <article>
-                        <h2>Équipements</h2>
-                        <ul>
-                        {logements.equipments.map((equipment) => <li key={equipment}>{equipment}</li>)}
-                        </ul>
-                    </article>
-                </div>
+                <Toggle title="Description" content={<p>{logements.description}</p>} />
+                <Toggle title="Équipements" content={<ul>{logements.equipments.map((equipment) => <li key={equipment}>{equipment}</li>)}</ul>} />
             </section>
         </main>
     )

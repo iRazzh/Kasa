@@ -1,0 +1,74 @@
+.details-title, .details-location{
+    color: #FF6060;
+    font-size: 25px;
+    font-weight: 500;
+}
+.details-location{
+    font-size: 20px;
+    font-weight: 400;
+}
+.details-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+}
+.details-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.details-profile-host{
+    display: flex;
+    align-items: center;
+}
+.details-host-name{
+    color: #FF6060;
+    font-size: 16px;
+    width: 50%;
+    text-align: right;
+    margin-right: 1rem;
+}
+.details-host-picture{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%
+}
+.details-toggle{
+    background-color: rgba(246, 246, 246, 1);
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+.details-toggle h2{
+    background-color: rgba(255, 96, 96, 1);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details-toggle h2 span{
+    display: flex;
+}
+.details-toggle h2, .details-toggle p{
+    margin: 0;
+}
+.details-toggle h2, .details-toggle p{
+    padding: 15px;
+}
+.details-toggle p, .details-toggle li{
+    color: rgba(255, 96, 96, 1);
+}
+.details-toggle ul {
+    padding: 15px;
+    margin: 0;
+}
+.details-toggle li{
+    list-style: none;
+}
+.details-toggle p, .details-toggle ul{
+    display: none;
+}
+.details-toggle.active p, .details-toggle.active ul{
+    display: block;
+}
