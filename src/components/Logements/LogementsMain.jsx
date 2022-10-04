@@ -2,8 +2,12 @@ import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from 'react'
 import '../../styles/Locations/LocationMain.css'
 
+import Descriptions from './scripts/Descriptions'
 import Tags from './scripts/Tags'
 import Toggle from './scripts/Toggle'
+import Stars from './scripts/Stars'
+import Slider from './scripts/Slider'
+import NoResultMain from '../404/NoResultMain'
 
 export default function LogementsMain() {
     const [logements, setLogements] = useState({tags:[], equipments:[], pictures:[], rating:'', host:{'name':'', 'picture':''}});
@@ -30,21 +34,24 @@ export default function LogementsMain() {
             }
         })
     },[id]);
+    
+    // S'il n'y a pas d'images = pas de logements donc 404
+    if (logements.pictures.length === 0) {
+        return <NoResultMain />
+    }
 
     return(
         <main>
-            <section className="slider">
-                <img src={logements.pictures[0]} alt="" />
-            </section>
+            <Slider slider={logements.pictures}/>
 
+            <Descriptions logements={logements}/>
+            
             <section className="details">
-                <h1 className="details-title">{logements.title}</h1>
-                <p className="details-location">{logements.location}</p>
 
                 <ul className="details-tags">{logements.tags.map((tag) => <Tags key={tag} tag={tag} />)}</ul>
 
                 <div className="details-profile">
-                    <p>{logements.rating}</p>
+                    <Stars rating={logements.rating} key={logements.id} />
                     <div className="details-profile-host">
                         <p className="details-host-name">{logements.host.name}</p>
                         <img className="details-host-picture" src={logements.host.picture} alt="" />
