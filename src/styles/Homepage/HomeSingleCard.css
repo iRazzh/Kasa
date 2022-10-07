@@ -22,3 +22,16 @@
     position: absolute;
     bottom: 10px;
 }
+@media (min-width: 600px) {
+    .card{
+        margin-bottom: 0;
+    }
+    .cards a{
+        width: 49%;
+    }
+}
+@media (min-width: 769px) {
+    .cards a{
+        width: 32%;
+    }
+}

@@ -1,3 +1,26 @@
 main{
     margin: 0 10px;
 }
+@media (min-width: 600px) {
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 11px;
+    }
+}
+@media (min-width: 769px) {
+    .cards{
+        gap: 14px;
+    }
+}
+@media (min-width: 1301px) {
+    main{
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    .cards{
+        gap: 24px;
+        margin-bottom: 4rem;
+    }
+}

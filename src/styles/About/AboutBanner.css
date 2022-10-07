@@ -12,3 +12,14 @@
     object-fit: cover;
     object-position: -480px 0;
 }
+@media (min-width: 600px) {
+    .about-banner div img{
+        width: 100%;
+        object-position: 0 0;
+    }
+}
+@media (min-width: 769px) {
+    .about-banner {
+        margin-bottom: 4rem;
+    }
+}

@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react'
 import HomeBanner from './HomeBanner'
 import HomeSingleCard from './HomeSingleCard'
 
-import { Link } from "react-router-dom"
-
 export default function HomeMain() {
   const [ logements , setLogements ] = useState([]);
 
@@ -31,7 +29,6 @@ export default function HomeMain() {
   return (
       <main>
           <HomeBanner />
-          <Link to="/404"><p>404 layout</p></Link>
           <section className="cards">
             {logements 
             && logements.length > 0 

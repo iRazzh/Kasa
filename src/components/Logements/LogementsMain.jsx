@@ -47,7 +47,6 @@ export default function LogementsMain() {
             <Descriptions logements={logements}/>
             
             <section className="details">
-
                 <ul className="details-tags">{logements.tags.map((tag) => <Tags key={tag} tag={tag} />)}</ul>
 
                 <div className="details-profile">
@@ -57,9 +56,10 @@ export default function LogementsMain() {
                         <img className="details-host-picture" src={logements.host.picture} alt="" />
                     </div>
                 </div>
-
-                <Toggle title="Description" content={<p>{logements.description}</p>} />
-                <Toggle title="Équipements" content={<ul>{logements.equipments.map((equipment) => <li key={equipment}>{equipment}</li>)}</ul>} />
+                <div className="toggles">
+                    <Toggle title="Description" content={<p>{logements.description}</p>} />
+                    <Toggle title="Équipements" content={<ul>{logements.equipments.map((equipment) => <li key={equipment}>{equipment}</li>)}</ul>} />
+                </div>
             </section>
         </main>
     )

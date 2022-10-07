@@ -23,3 +23,9 @@
 .card-about p{
     color: rgba(255, 96, 96, 1);
 }
+@media (min-width: 1301px) {
+    .about-section{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

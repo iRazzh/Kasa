@@ -20,9 +20,19 @@
     transform: translate(0%, -50%);
     z-index:999;
 }
-
 .slider-container-img {
     display: flex;
     height: 300px;
     transition: transform .5s ease;
+}
+.slider-container-img img{
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 15px;
+}
+@media (min-width: 426px) {
+    .slider-container-img{
+        height: 500px;
+    }
 }

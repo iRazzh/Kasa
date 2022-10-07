@@ -19,3 +19,9 @@ nav p{
 nav a{
     text-decoration: none;
 }
+@media (min-width: 1301px){
+    header{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
