@@ -5,7 +5,7 @@ main{
     .cards{
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: space-between;
         gap: 11px;
     }
 }
@@ -20,7 +20,10 @@ main{
         max-width: 1200px;
     }
     .cards{
-        gap: 24px;
+        gap: 31px;
         margin-bottom: 4rem;
+        background-color: #F7F7F7;
+        padding: 35px;
+        border-radius: 25px;
     }
 }

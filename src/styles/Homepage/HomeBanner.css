@@ -34,12 +34,16 @@ main img{
         transform: translate(-50%, -50%);
     }
     .banner div img{
-        object-position: 0 -730px;
+        object-position: 0 -455px;
         width:100%
     }
 }
 @media (min-width: 1301px) {
     .banner {
         margin-bottom: 3rem;
+    }
+    .banner div img{
+        object-position: 0 -750px;
+        width:100%
     }
 }
